@@ -48,4 +48,9 @@ public class User implements Serializable {
 		this.passwd = passwd;
 	}
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", account=" + account + ", passwd=" + passwd + "]";
+	}
+	
 }

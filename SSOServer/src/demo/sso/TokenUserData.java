@@ -27,6 +27,7 @@ public class TokenUserData {
 	 */
 	public static void addToken(String token, User user) {
 		dataMap.put(token, user);
+		showCurrentToken();
 	}
 
 	/**
@@ -36,6 +37,7 @@ public class TokenUserData {
 	 * @return
 	 */
 	public static User validateToken(String token) {
+		showCurrentToken();
 		return dataMap.get(token);
 	}
 
@@ -46,5 +48,14 @@ public class TokenUserData {
 	 */
 	public static void removeToken(String token) {
 		dataMap.remove(token);
+		showCurrentToken();
+	}
+	
+	private static void showCurrentToken() {
+		System.out.println("Current tokens:");
+		dataMap.forEach((k, v) -> {
+			System.out.println(k + "=" + v.toString());
+		});
+		
 	}
 }
