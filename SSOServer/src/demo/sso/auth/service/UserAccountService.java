@@ -28,7 +28,14 @@ public class UserAccountService {
 			return null;
 		}
 		
-		return userAccountDao.findUserByAccount(account);
+		User user = new User();
+		user.setName("tt");
+		user.setPasswd("tt");
+		user.setId(123);
+		user.setAccount("testtest");
+		return user;
+		
+//		return userAccountDao.findUserByAccount(account);
 	}
 
 }

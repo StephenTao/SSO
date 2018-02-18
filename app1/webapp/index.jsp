@@ -7,6 +7,7 @@
 <title>app1's index.jsp</title>
 </head>
 <body>
+<p>App 1</p>
 user: ${user.name}
 <p><a href="/server/logout">logout</a></p>
 </body>

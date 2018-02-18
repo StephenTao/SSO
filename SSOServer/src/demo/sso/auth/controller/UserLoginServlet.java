@@ -56,6 +56,7 @@ public class UserLoginServlet extends HttpServlet {
 		// 按account查找用户
 		User user = null;
 		try {
+			
 			user = userAccountService.findUserByAccount(account);
 
 			if (user != null) {
