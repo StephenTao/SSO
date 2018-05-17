@@ -1,2 +1,4 @@
-/.metadata/
-/.recommenders/
+/SSOServer/build
+/SSOServer/bin
+/app1/build
+/app2/build
