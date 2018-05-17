@@ -1,6 +1,7 @@
 package demo.sso;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import demo.sso.model.User;
@@ -53,9 +54,18 @@ public class TokenUserData {
 	
 	private static void showCurrentToken() {
 		System.out.println("Current tokens:");
-		dataMap.forEach((k, v) -> {
-			System.out.println(k + "=" + v.toString());
-		});
+		
+		Iterator<String> keys = dataMap.keySet().iterator();
+		while (keys.hasNext()) {
+			String key = keys.next();
+			User user = dataMap.get(key);
+			System.out.println(key + "=" + user.toString());
+		}
+		
+		//java 8
+//		dataMap.forEach((k, v) -> {
+//		    System.out.println(key + "=" + user.toString());
+//		});
 		
 	}
 }
