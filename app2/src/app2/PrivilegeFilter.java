@@ -9,7 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import demo.sso.client.User;
+import easy.sso.client.User;
 
 public class PrivilegeFilter implements Filter {
 

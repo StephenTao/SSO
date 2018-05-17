@@ -1,4 +1,4 @@
-package demo.sso.client;
+package easy.sso.client;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +15,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import demo.sso.client.util.CookieUtil;
+import easy.sso.client.util.CookieUtil;
 
 /**
  * SSO客户端模块Filter

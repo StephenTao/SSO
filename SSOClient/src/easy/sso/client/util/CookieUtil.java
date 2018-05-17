@@ -1,4 +1,4 @@
-package demo.sso.client.util;
+package easy.sso.client.util;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

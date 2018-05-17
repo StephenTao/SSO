@@ -1,4 +1,4 @@
-package demo.sso.client;
+package easy.sso.client;
 
 import java.io.Serializable;
 
