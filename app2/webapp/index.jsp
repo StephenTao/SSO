@@ -13,7 +13,7 @@
 
 <body>
 <div class="alert alert-primary" role="alert">
-  This app2!
+  Welcome to APP-2
 </div>
 user: ${user.name}
 </body>

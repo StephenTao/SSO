@@ -4,7 +4,7 @@
   
   <filter>
   	<filter-name>sso-app1</filter-name>
-  	<filter-class>demo.sso.client.SSOFilter</filter-class>
+  	<filter-class>easy.sso.client.SSOFilter</filter-class>
   </filter>
   
   <filter-mapping>
