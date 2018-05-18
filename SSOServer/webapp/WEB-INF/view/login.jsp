@@ -10,7 +10,8 @@
     <title>SSO Server login</title>
 </head>
 <body>
-    <form method="post" action="login" enctype="application/x-www-form-urlencoded">
+    <div class="container">
+        <form method="post" action="login" enctype="application/x-www-form-urlencoded">
         <input type="hidden" name="origUrl" value="${origUrl}" />
         <c:if test="${not empty errInfo}">
             <div class="alert alert-danger" role="alert">${errInfo}</div>
@@ -29,5 +30,6 @@
         </div>
          <button type="submit" class="btn btn-primary mb-2">Login</button>
     </form>
+    </div>
 </body>
 </html>

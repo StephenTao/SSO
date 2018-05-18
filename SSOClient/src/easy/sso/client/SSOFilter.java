@@ -18,16 +18,12 @@ import javax.servlet.http.HttpServletResponse;
 import easy.sso.client.util.CookieUtil;
 
 /**
- * SSO客户端模块Filter
+ * SSO client login Filter
  * 
- * @author Administrator
+ * @author Stephen Huang
  *
  */
 public class SSOFilter implements Filter {
-
-    // SSO Server登录页面URL
-    private static final String SSO_LOGIN_URL = "/server/login";
-    private static final String  SSO_VALIDATE_URL = "http://localhost:8080/server/validate";
 
     // 拦截操作
     @Override
@@ -49,10 +45,10 @@ public class SSOFilter implements Filter {
 
         // token 不存在，跳转到SSOServer用户登录页
         if (token == null) {
-            resp.sendRedirect(SSO_LOGIN_URL + "?origUrl="
+            resp.sendRedirect(Constants.SSO_LOGIN_URL + "?origUrl="
                     + URLEncoder.encode(origUrl, "utf-8"));
         } else { // token存在，验证有效性
-            URL validateUrl = new URL(SSO_VALIDATE_URL + "?token=" + token);
+            URL validateUrl = new URL(Constants.SSO_VALIDATE_URL + "?token=" + token);
             HttpURLConnection conn = (HttpURLConnection) validateUrl
                     .openConnection();
 
@@ -65,7 +61,7 @@ public class SSOFilter implements Filter {
             String ret = new String(buffer);
 
             if (ret.length() == 0) { // 返回空字符串，表示 token无效
-                resp.sendRedirect(SSO_LOGIN_URL + "?origUrl="
+                resp.sendRedirect(Constants.SSO_LOGIN_URL + "?origUrl="
                         + URLEncoder.encode(origUrl, "utf-8"));
             } else {
                 String[] tmp = ret.split(";");

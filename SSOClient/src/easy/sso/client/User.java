@@ -3,39 +3,39 @@ package easy.sso.client;
 import java.io.Serializable;
 
 /**
- * 用户实体类
+ * SSO User model
  * 
- * @author Administrator
+ * @author Stephen Huang
  *
  */
 @SuppressWarnings("serial")
 public class User implements Serializable {
 
-	private Integer id;
-	private String name;
-	private String account;
+    private Integer id;
+    private String name;
+    private String account;
 
-	public Integer getId() {
-		return id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getAccount() {
-		return account;
-	}
+    public String getAccount() {
+        return account;
+    }
 
-	public void setAccount(String account) {
-		this.account = account;
-	}
+    public void setAccount(String account) {
+        this.account = account;
+    }
 }

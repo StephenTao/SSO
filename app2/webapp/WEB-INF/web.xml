@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>app2</display-name>
- 
+
   <filter>
-    <filter-name>easy-sso</filter-name>
+    <filter-name>easy-sso-login</filter-name>
     <filter-class>easy.sso.client.SSOFilter</filter-class>
   </filter>
 
   <filter-mapping>
-    <filter-name>easy-sso</filter-name>
+    <filter-name>easy-sso-login</filter-name>
     <url-pattern>*.jsp</url-pattern>
   </filter-mapping>
   
+  <servlet>
+    <servlet-name>easy-sso-logout</servlet-name>
+    <servlet-class>easy.sso.client.LogoutServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>easy-sso-logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+
   <filter>
     <filter-name>app2</filter-name>
     <filter-class>app2.PrivilegeFilter</filter-class>
   </filter>
-  
+
   <filter-mapping>
     <filter-name>app2</filter-name>
     <url-pattern>*.jsp</url-pattern>
@@ -26,8 +36,5 @@
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

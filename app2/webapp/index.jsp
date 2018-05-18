@@ -12,9 +12,13 @@
 </head>
 
 <body>
-<div class="alert alert-primary" role="alert">
-  Welcome to APP-2
-</div>
-user: ${user.name}
+    <div class="container">
+        <div class="alert alert-primary" role="alert">Welcome to APP-2</div>
+        user: ${user.name}
+
+        <form method="get" action="logout" enctype="application/x-www-form-urlencoded">
+             <button type="submit" class="btn btn-primary mb-2">Logout</button>
+        </form>
+    </div>
 </body>
 </html>
