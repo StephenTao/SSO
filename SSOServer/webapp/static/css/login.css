@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+body {
+    background: #9b9999;
+}
+
+.login {
+    width: 400px;
+    heigth: 400px;
+    margin: auto;
+    margin-top: 15%;
+    background: rgba(0,123,255,.25);
+}
+
+.pd125 {
+    padding: 0rem 1.25rem;
+}
+.pdb50 {
+    padding-bottom: 0.75rem;
+}
+
+.align-center {
+    text-align: center !important;
+}

@@ -16,21 +16,21 @@ import demo.sso.model.User;
  */
 @WebServlet("/validate")
 public class TokenValidateServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		String token = request.getParameter("token");
-		User user = TokenUserData.validateToken(token);
+    protected void doGet(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        String token = request.getParameter("token");
+        User user = TokenUserData.validateToken(token);
 
-		if (user == null) {
-			response.getWriter().write("");
-		} else {
-			// 如果有中文，要考虑乱码问题，此处不处理
-			response.getWriter().write(
-					"id=" + user.getId() + ";name=" + user.getName()
-							+ ";account=" + user.getAccount());
-		}
-	}
+        if (user == null) {
+            response.getWriter().write("");
+        } else {
+            // 如果有中文，要考虑乱码问题，此处不处理
+            response.getWriter().write(
+                    "id=" + user.getId() + ";name=" + user.getName()
+                            + ";account=" + user.getAccount());
+        }
+    }
 
 }
